@@ -4,7 +4,7 @@ links.forEach(link => {
     link.addEventListener('click', event => {
         event.preventDefault();
         event.stopPropagation();
-        event.target.parentNode.childNodes.forEach(node => {
+        event.target.closest('.menu__item').childNodes.forEach(node => {
             if (node.classList?.contains('menu_active')) {
                 node.classList.remove('menu_active');
             } else if (node.classList?.contains('menu_sub')) {
